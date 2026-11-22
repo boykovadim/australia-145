@@ -28,7 +28,6 @@ canvas#gl.drag{cursor:grabbing}
 header{position:fixed;left:0;right:0;top:0;z-index:35;display:flex;align-items:flex-start;justify-content:space-between;padding:22px 30px;pointer-events:none;transition:opacity .5s,transform .6s cubic-bezier(.2,.8,.2,1)}
 header>*{pointer-events:auto}
 .brand .kick{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);display:flex;gap:8px;align-items:center}
-.star{width:16px;height:16px;color:var(--acc)}
 .brand h1{font-family:var(--serif);font-weight:400;font-size:38px;letter-spacing:-.01em;line-height:1.05;margin-top:6px}
 .brand h1 em{font-style:italic;color:var(--acc2)}
 #credit{position:fixed;left:30px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:11;color:var(--ink2);font-size:13px;pointer-events:none}
@@ -141,9 +140,7 @@ body.ovopen #labels,body.ovopen #card,body.ovopen #quick,body.ovopen #timeline,b
 .lgi code{font:600 11px ui-monospace,Menlo,monospace;min-width:38px;padding:2px 4px;border-radius:5px;text-align:center;border:1px solid rgba(0,0,0,.1);flex:none}
 #lgsearch{padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.8);font:14px var(--sans);width:260px;outline:none}
 #loader{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;background:var(--bg);transition:opacity .8s}
-#loader .star{width:42px;height:42px;animation:spin 2.4s linear infinite}
 #loader div{font-family:var(--serif);font-size:20px;color:var(--ink2)}
-@keyframes spin{to{transform:rotate(360deg)}}
 body.exp header{opacity:0;transform:translateY(-30px);pointer-events:none}
 body.exp #card{opacity:0;transform:translateX(-60px);pointer-events:none}
 body.exp #quick{opacity:0;transform:translateX(60px);pointer-events:none}
@@ -180,10 +177,7 @@ body.exp #labels{opacity:0}
 </head>
 <body>
 <canvas id="grain"></canvas>
-<div id="loader"><svg class="star" viewBox="0 0 24 24"><use href="#i-star"/></svg><div>Собираю слои профиля…</div></div>
-<svg width="0" height="0" style="position:absolute"><defs>
-<symbol id="i-star" viewBox="0 0 24 24"><g fill="currentColor"><path d="M11 1h2l.6 8.2L18.4 2.6l1.6 1.2-4.2 7 7.6-2.6.6 1.9L16.3 12l7.7 1.9-.6 1.9-7.6-2.6 4.2 7-1.6 1.2-4.8-6.6L13 23h-2l-.6-8.2-4.8 6.6L4 20.2l4.2-7-7.6 2.6L0 13.9 7.7 12 0 10.1l.6-1.9 7.6 2.6-4.2-7L5.6 2.6l4.8 6.6z"/></g></symbol>
-</defs></svg>
+<div id="loader"><div>Собираю слои профиля…</div></div>
 <canvas id="gl"></canvas>
 <div id="labels"></div>
 <div id="callouts"><svg id="colines"></svg></div>
